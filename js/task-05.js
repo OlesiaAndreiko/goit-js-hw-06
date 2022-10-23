@@ -1,10 +1,10 @@
 const refs = {
-  input : document.querySelector('#name-input'),
-  name : document.querySelector('#name-output')
+ input : document.querySelector('#name-input'),
+ name : document.querySelector('#name-output'),
 }
 
-refs.input.addEventListener('input', OnChageInput)
+refs.input.addEventListener('input', OnChageOutput)
 
-function OnChageInput (evt) {
+function OnChageOutput (evt) {
     refs.name.textContent = evt.currentTarget.value
 }
