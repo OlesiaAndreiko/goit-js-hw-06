@@ -17,11 +17,10 @@ const images = [
 const galleryList = document.querySelector('.gallery')
 
 const markup = images.reduce((acc, {url, alt}) => 
-acc + `<li><img src="${url}" alt="${alt}" width="300px"></li>`, '')
+  acc + `<li><img src="${url}" alt="${alt}" width="300px"></li>`, '')
 
 galleryList.insertAdjacentHTML("afterbegin", markup)
 
-// console.log(galleryList);
 
 galleryList.style.listStyle = "none";
 galleryList.style.display = "flex";
