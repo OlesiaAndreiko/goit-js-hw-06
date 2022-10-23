@@ -16,7 +16,9 @@ const images = [
 
 const galleryList = document.querySelector('.gallery')
 
-const markup = images.reduce((acc, {url, alt}) => acc + `<li class="item"><img src="${url}" alt="${alt}" width="300px"></li>`, '')
+const markup = images.reduce((acc, {url, alt}) => 
+acc + `<li><img src="${url}" alt="${alt}" width="300px"></li>`, '')
+
 galleryList.insertAdjacentHTML("afterbegin", markup)
 
 // console.log(galleryList);
