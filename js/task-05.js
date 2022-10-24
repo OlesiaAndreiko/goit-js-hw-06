@@ -3,8 +3,8 @@ const refs = {
  name : document.querySelector('#name-output'),
 }
 
-refs.input.addEventListener('input', OnChageOutput)
+refs.input.addEventListener('input', OnChageOutput);
 
 function OnChageOutput (evt) {
-    refs.name.textContent = evt.currentTarget.value
+    refs.name.textContent = evt.currentTarget.value;
 }

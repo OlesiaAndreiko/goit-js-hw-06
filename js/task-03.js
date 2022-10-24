@@ -14,17 +14,15 @@ const images = [
 ];
 
 
-const galleryList = document.querySelector('.gallery')
+const galleryList = document.querySelector('.gallery');
 
 const markup = images.reduce((acc, {url, alt}) => 
-  acc + `<li><img src="${url}" alt="${alt}" width="300px"></li>`, '')
+   acc + `<li><img src="${url}" alt="${alt}" width="300px"></li>`, '')
 
-galleryList.insertAdjacentHTML("afterbegin", markup)
-
+galleryList.insertAdjacentHTML("afterbegin", markup);
 
 galleryList.style.listStyle = "none";
 galleryList.style.display = "flex";
 galleryList.style.flexWrap = "wrap";
 galleryList.style.justifyContent = "space-between";
 galleryList.style.alignItems = "center";
-
