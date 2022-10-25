@@ -12,56 +12,44 @@ let inputValue
 
 inputNumber.addEventListener('input', onInputNumber);
 createBtn.addEventListener('click', createBoxes);
-destroyBtn.addEventListener('click', remoteBoxes);
+destroyBtn.addEventListener('click', destroyBoxes);
 
 
 function onInputNumber(evt) {
   inputValue = Number(evt.currentTarget.value)
-  return inputValue;
-
-  // return Number(evt.currentTarget.value) 
 }
+
 
 function createBoxes(amount) {
   amount = inputValue;
-  console.log(amount)
+  // console.log(amount)
   const boxes =[];
-  let counter = 10
-
-  // for(let i = 1; i < amount; i =+ 1){
-  //   const box = document.createElement('div');
-  //   box.style.width = "30px";
-  //   box.style.height = "30px";
-  //   box.style.backgroundColor = getRandomHexColor();
-  //   boxes.push(box);   
-  // }
   
-  //   console.log(boxes)
-  //   boxesCollection.append(...boxes)
-  //   console.log(boxesCollection)
-  // }
-
-    
-
   do {
     const box = document.createElement('div');
     box.style.width = "30px";
     box.style.height = "30px";
     box.style.backgroundColor = getRandomHexColor();
     boxes.push(box)
-  } while (boxes.length < amount);
+    } while (boxes.length < amount);
 
-  console.log(boxes)
   boxesCollection.append(...boxes)
-  console.log(boxesCollection)
+
+  // console.log(boxesCollection)
+  // console.log(boxes)
+
+  boxes.forEach((box, idx) => {
+    const counter = idx * 10
+    // console.log(idx)
+    // console.log(counter)
+    // console.log(box.style.width)
+    box.style.width = `${Number.parseInt(box.style["width"]) + counter}px`
+    box.style.height = `${Number.parseInt(box.style["height"]) + counter}px`
+    // console.log(box.style.width)
+  })  
 }
 
-// const changeValue = 30 + counter
-// box.style.width = `${changeValue}px`;
-// box.style.height = `${changeValue}px`;
 
-
-function remoteBoxes() {
-  // console.dir(boxesCollection)
+function destroyBoxes() {
   boxesCollection.innerHTML = "";
 }
