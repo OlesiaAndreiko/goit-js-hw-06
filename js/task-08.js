@@ -16,8 +16,8 @@ function onSubmit(evt) {
   
   if (email.value === "" || password.value === "") {
     alert("Please fill in all fields!");
-  }
-
+  } else {
   console.log(`Login: ${email.value}, Password: ${password.value}`);
   evt.currentTarget.reset();
+  }
 }

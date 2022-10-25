@@ -16,4 +16,3 @@ function OnChageOutput (evt) {
         refs.name.textContent = "Anonymous";
     } else refs.name.textContent = evt.currentTarget.value;
 }    
-
