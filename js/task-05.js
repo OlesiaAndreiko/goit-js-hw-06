@@ -5,6 +5,15 @@ const refs = {
 
 refs.input.addEventListener('input', OnChageOutput);
 
+
+// function OnChageOutput (evt) {
+//     refs.name.textContent = evt.currentTarget.value;
+// }
+
+
 function OnChageOutput (evt) {
-    refs.name.textContent = evt.currentTarget.value;
-}
+    if(!evt.currentTarget.value){
+        refs.name.textContent = "Anonymous";
+    } else refs.name.textContent = evt.currentTarget.value;
+}    
+
